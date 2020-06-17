@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lista Estudiantes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="container-contact100" style="background-image: url('images/bg-01.jpg');">
+	<table class="table table-sm table-dark">
+		<thead>
+			<th scope="col">Codigo</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Apellido</th>
+			<th scope="col">Carne</th>
+			<th scope="col">Carrera</th>
+		</thead>
+		<th:block th:each="e, row: ${estudiantes}">
+			<tr>
+				
+					<td class="bg-primary" th:text="${e.codigo}"/>
+					<td class="bg-primary" th:text="${e.nombre}"/>
+					<td class="bg-primary" th:text="${e.apellido}"/>
+					<td class="bg-primary" th:text="${e.carne}"/>
+					<td class="bg-primary" th:text="${e.carrera}"/>
+					<td class="bg-primary">
+					
+					</td>
+				
+			</tr>
+		</th:block>
+	</table>
+	
+	<form class="contact100-form" method="post" th:action="@{/deleteEstudiante}">
+	<div class="wrap-contact100">
+					<span class="contact100-form-title"> Eliminar Estudiante </span>
+					<input type="text"  placeholder="Codigo del Estudiante" id="codigo" name="codigo">
+					<input type="submit" class="btn btn-outline-light" value="eliminar estudiante">
+					</div>
+	</form>
+	
+	<br>
+	<br>
+	<button class="btn btn-outline-light"><a href="/inicio" style="text-decoration:none; color: #000;">Volver</a></button>
+	</div>
+</body>
+</html>
