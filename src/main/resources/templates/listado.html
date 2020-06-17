@@ -54,11 +54,13 @@
 		</th:block>
 	</table>
 	
-	<form class="contact100-form" method="post" th:action="@{/deleteEstudiante}">
+	<form class="contact100-form" method="post" th:action="@{/buscar}">
 	<div class="wrap-contact100">
-					<span class="contact100-form-title"> Eliminar Estudiante </span>
+					<span class="contact100-form-title"> Codigo Estudiante </span>
 					<input type="text"  placeholder="Codigo del Estudiante" id="codigo" name="codigo">
-					<input type="submit" class="btn btn-outline-light" value="eliminar estudiante">
+					<button type="submit" class="btn btn-outline-light" name="action" value="eliminar">Eliminar</button>
+					<button type="submit" class="btn btn-outline-light" name="action" value="buscar">Buscar</button>
+					<button type="submit" class="btn btn-outline-light" name="action" value="editar">Editar</button>
 					</div>
 	</form>
 	

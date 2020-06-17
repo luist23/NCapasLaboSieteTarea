@@ -29,9 +29,7 @@ public class EstudianteServiceImpl implements EstudianteService {
 	@Override
 	@Transactional
 	public void delete(Integer codigo) throws DataAccessException {
-
 		estudianteRepo.deleteById(codigo);
-		
 	}
 	
 	@Override
