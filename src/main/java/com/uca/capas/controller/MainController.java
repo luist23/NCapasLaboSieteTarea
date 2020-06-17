@@ -27,7 +27,6 @@ public class MainController {
 		
 		List<Estudiante> estudiantes = null;
 		try {
-			
 			estudiantes = estudianteService.findAll();
 			
 		}catch (Exception e) {
